@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-3">
+          <h3>New Mentor</h3>
+          <form onsubmit="submitMentor(); return false;">
+            <label for="name">Name</label>
+            <input
+              type="text"
+              value=""
+              placeholder="Mentor Name"
+              id="mentorName"
+            />
+            <button class="btn btn-primary" type="submit">Submit</button>
+          </form>
+        </div>
+        <div class="col-3">
+          <h3>New Student</h3>
+          <form onsubmit="submitStudent(); return false;">
+            <label for="name">Name</label>
+            <input
+              type="text"
+              value=""
+              placeholder="Student Name"
+              id="studentName"
+            />
+            <button class="btn btn-primary" type="submit">Submit</button>
+          </form>
+        </div>
+        <div class="col-3">
+          <button class="btn btn-primary" onclick="getMentors()">
+            Get Mentors
+          </button>
+          <div id="availableMentors" class="row"></div>
+          <button class="btn btn-primary" onclick="displayAssignedStudents()">
+            View assigned Students
+          </button>
+          <div id="assignedStudents" class="row"></div>
+        </div>
+        <div class="col-3">
+          <button class="btn btn-primary" onclick="getStudents()">
+            Get Students
+          </button>
+          <div id="availableStudents" class="row"></div>
+          <button class="btn btn-primary" onclick="assignMentor()">
+            Assign them Mentor
+          </button>
+        </div>
+      </div>
+      <!-- <div class="row">
+          di
+      </div> -->
+    </div>
+    <script src="script.js" async defer></script>
+  </body>
+</html>
